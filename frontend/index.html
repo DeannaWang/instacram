@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Instacram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- You can add your styles and scripts here -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/provided.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="module" src="src/helpers.js"></script>
+    <script type="module" src="src/api.js"></script>
+</head>
+<body>
+    <!-- This is an example app structure --> 
+    <header class='banner'>
+        <div style="display: flex; flex-direction: row; align-items: center;">
+            <img src="favicon.png" style="max-height: 36px;margin-right: 10px;"></img>
+            <!-- <h1 id='title' style='cursor:pointer;'>Instacram</h1> -->
+            <img id='title' src="title.png" style="max-height: 36px; cursor: pointer;"></img>
+        </div>
+        <span class='hello' style='color: white;'></span>
+        <ul class='search-bar' id='search-bar' style="display:none;">
+            <li><input type='text' id='search-username' placeholder="Search User"></li>
+        </ul>
+        <span class='hello' style='color: #aaa;'></span>
+        <ul class='nav' id='nav' style='display:none;'>
+            <li class='nav-item tooltip'>
+                <i id='add-post-btn' class="material-icons" style="font-size:30px">add_a_photo</i>
+                <span class='tooltiptext'>Add Photo</span>
+            </li>
+            <li class='nav-item tooltip'>
+                <a id='profile-btn'><i class="material-icons" style="font-size:30px">face</i></a>
+                <span class='tooltiptext'>Profile</span>
+            </li>
+            <li class='nav-item tooltip'>
+                <i id='logout-btn' class="material-icons" style="font-size:30px">exit_to_app</i>
+                <span class='tooltiptext'>Log Out</span>
+            </li>
+        </ul>
+    </header>
+    <main role='main' id='main'>
+        <!-- app goes here --> 
+        <div id='large-feed'>
+            <!-- inject feed data -->            
+        </div>
+        <div id='user-page'></div>
+        <div class='spinner' id='loading'>
+            <div>
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>  
+    </main>
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
